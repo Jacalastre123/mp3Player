@@ -105,11 +105,11 @@
             
 
                 const list = document.createElement("div")
-                list.style.height = "22%"
+                list.style.height = "40%"
                 list.style.width = "30%"
                 list.style.backgroundColor = "powderblue"
                 list.classList = "inline"
-                list.style.fontSize = "25%"
+                
                 list.onclick = function() {
                     audit.src = URL.createObjectURL(musicType)
                     audit.play()
@@ -119,6 +119,7 @@
                 
                 const listTitle = document.createElement("h5")
                 listTitle.innerHTML = musicType.name
+                listTitle.style.fontSize = "29%"
                 
                 list.appendChild(listTitle)
                 
