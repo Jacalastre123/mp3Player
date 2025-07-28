@@ -31,9 +31,9 @@
             }
 
             button {
-                background-color: lightblue;
+                background-color: rgb(20,70,125);
                 border: 2px white;
-                height: 10%;
+                height: 15%;
                 width: 70%;
                 font-size: 190%;
                 text-align: center;
@@ -41,14 +41,14 @@
             }
 
             input[type="file"] {
-                font-size: 30px;
+                font-size: 50px;
                 
                 padding: 5px;
                 margin: 10px;
             }
             
             input[type="submit"] {
-                font-size: 30px;
+                font-size: 40px;
                 
                 padding: 5px;
                 margin: 10px;
@@ -69,6 +69,10 @@
               border-radius: 5px;
               
             }
+
+            h5 {
+                font-size: 50px;
+            }
             
       
             
@@ -82,7 +86,11 @@
         <button id="play" onclick="start()">Play</button>
         <h5>Choose file here:</h5>
         <form>
-            <input type="file" id="audios" accept="audio/mp3, audio/wav, audio/mpeg3, audio/ogg"><br>
+            <label for="music">Music</label>
+            <input name="music" type="file" id="audios" accept="audio/mp3, audio/wav, audio/mpeg3, audio/ogg"><br>
+
+            <label for="music">Music</label>
+            <input name="music" type="file" id="picto" accept="image/*"><br>
             <input class="submission" type="submit" onclick="plays(event)">
         </form>
         </div>
@@ -90,6 +98,7 @@
             const title = document.getElementById("title")
             const play = document.getElementById("play")
             const audios = document.getElementById("audios")
+            const picto = document.getElementById("picto")
             let playing = false
              const audit = document.getElementById("audit")
             function plays(event) {
@@ -100,6 +109,11 @@
               audit.src = URL.createObjectURL(musicType)
               audit.play()
                 title.innerHTML = musicType.name
+
+                  const picType = picto.files[0]
+              document.body.style.backgroundImage = `url('${URL.createObjectURL(picType)}')`
+              
+                  
 
                
             
