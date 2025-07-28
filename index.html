@@ -44,14 +44,14 @@
             }
 
             input[type="file"] {
-                font-size: 50px;
+                font-size: 60%;
                 
                 padding: 5px;
                 margin: 10px;
             }
             
             input[type="submit"] {
-                font-size: 40px;
+                font-size: 60%;
                 
                 padding: 5px;
                 margin: 10px;
@@ -74,11 +74,11 @@
             }
 
             h5 {
-                font-size: 50px;
+                font-size: 50%;
             }
 
             label {
-                font-size: 40px;
+                font-size: 55%;
                 
             }
             
@@ -114,14 +114,19 @@
                 event.preventDefault()
 
                 const musicType = audios.files[0]
+                if (musicType) {
               audit.src = URL.createObjectURL(musicType)
               audit.play()
                 title.innerHTML = musicType.name
-
+                }
+            
                   const picType = picto.files[0]
+                if (picType) {
               document.body.style.backgroundImage = `url('${URL.createObjectURL(picType)}')`
               
-                  
+                }
+
+                else {}
 
                
             
