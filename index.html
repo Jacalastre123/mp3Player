@@ -160,9 +160,10 @@
             const audios = document.getElementById("audios")
             const picto = document.getElementById("picto")
             const extras = document.getElementById("extras")
-            let playing = false
+            
              const audit = document.getElementById("audit")
             const imgLink = document.createElement("input")
+            let playing = false
             extrad = false
 
         const listswiper = document.createElement("div")
@@ -178,6 +179,7 @@
 
 
             function extra() {
+                  
 
                 const block1 = document.createElement("br")
                  document.getElementById("formHold").appendChild(block1)
@@ -206,6 +208,17 @@
             }
             
             function plays(event) {
+
+                     const title = document.getElementById("title")
+            const play = document.getElementById("play")
+            const audios = document.getElementById("audios")
+            const picto = document.getElementById("picto")
+            const extras = document.getElementById("extras")
+            
+             const audit = document.getElementById("audit")
+            const imgLink = document.createElement("input")
+
+                
                 playing = true
                 event.preventDefault()
 
