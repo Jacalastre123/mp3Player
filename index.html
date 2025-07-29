@@ -25,9 +25,11 @@
 
             body {
                 font-family:Open Sans;
-                background-repeat: none;
+                background-repeat: no-repeat;
                 background-size: cover;
+                background-position: center
                 background-image: url("https://www.stockvault.net/data/2020/06/30/277212/preview16.jpg");
+                overflow-x: auto;
                 
                 
                 
@@ -64,6 +66,13 @@
             }
             
             input[type="submit"] {
+                max-font-size: 230%;
+                max-width: 70%;
+                padding: 5px;
+                margin: 10px;
+            }
+
+            input[type="url"] {
                 max-font-size: 230%;
                 max-width: 70%;
                 padding: 5px;
@@ -111,7 +120,7 @@
         <audio id="audit"></audio>
         <button id="play" onclick="start()">Play</button>
         
-        <form>
+        <form id="formHold">
             <h4>Choose file here:</h4>
             <label for="music">Music: </label>
             <input name="music" type="file" id="audios" accept="audio/*"><br>
@@ -120,6 +129,7 @@
             <input name="picting" type="file" id="picto" accept="image/*"><br>
             <input class="submission" type="submit" onclick="plays(event)">
         </form>
+        <button id="extras" onclick="pops()">More</button>
 
         
         
@@ -129,22 +139,44 @@
             const play = document.getElementById("play")
             const audios = document.getElementById("audios")
             const picto = document.getElementById("picto")
+            const extras = document.getElementById("extras")
             let playing = false
              const audit = document.getElementById("audit")
+            const imglink = document.createElement("input")
+            extrad = false
 
         const listswiper = document.createElement("div")
                 listswiper.style.height = "20%"
                 listswiper.style.width = "300%"
+                
             
                 
                 
                 
                 
                 document.body.appendChild(listswiper)
+
+
+            function extra() {
+                extrad = true
+                
+                imgLink.type = "url"
+                document.getElementById("formHold").appendChild(imgLink)
+                
+                extras.onclick = function() {
+                    extrad = false
+                    extras.onclick = extra
+                }
+                
+            }
             
             function plays(event) {
                 playing = true
                 event.preventDefault()
+
+                if (extrad) {
+                    document.body.style.backgroundImage = imgLink.name;
+                }
 
                 const musicType = audios.files[0]
                 if (musicType) {
