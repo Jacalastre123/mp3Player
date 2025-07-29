@@ -220,6 +220,10 @@
               audit.play()
                 title.innerHTML = musicType.name
                 }
+
+                else {
+                    console.warn("No music")
+                }
               
                   const picType = picto.files[0]
               if (picType) {
@@ -227,7 +231,9 @@
               
                 }
 
-                else {}
+                else {
+                    console.warn("No background")
+                        }
 
                
             
