@@ -35,7 +35,7 @@
             * {
               box-sizing: border-box;
             }
-            .inline {
+            .inliner {
                 display: inline-block;
                 margin: 3px;
                 background-repeat: none;
@@ -150,11 +150,11 @@
             
 
                 const list = document.createElement("div")
-                list.style.height = "240%"
-                list.style.width = "220%"
-                list.style.backgroundImage = `url('${URL.createObjectURL(picType)}')`
+                list.style.height = "340%"
+                list.style.width = "320%"
+                list.style.background = `url('${URL.createObjectURL(picType)}')`, powderblue`
                 
-                list.classList = "inline"
+                list.classList = "inliner"
                 
                 list.onclick = function() {
                     audit.src = URL.createObjectURL(musicType)
