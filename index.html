@@ -210,7 +210,7 @@
                 event.preventDefault()
 
                 if (extrad) {
-                    document.body.style.backgroundImage = `url('${imgLink.value}')`;
+                    document.body.style.backgroundImage = `url('${imgLink.value || "https://www.stockvault.net/data/2020/06/30/277212/preview16.jpg"}')`;
                 }
 
                 const musicType = audios.files[0]
