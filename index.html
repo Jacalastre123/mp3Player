@@ -127,6 +127,12 @@
             const picto = document.getElementById("picto")
             let playing = false
              const audit = document.getElementById("audit")
+
+            const listswiper = document.createElement("div")
+                listswiper.style.height = "1%"
+                listswiper.style.width = "200%"
+                listswiper.style.backgroundColor = "transparent"
+            
             function plays(event) {
                 playing = true
                 event.preventDefault()
@@ -148,11 +154,13 @@
 
                
             
-
+                
                 const list = document.createElement("div")
-                list.style.height = "340%"
+                list.style.height = "290%"
                 list.style.width = "99%"
                 list.style.backgroundColor = "powderblue"
+                
+                
                 
                 list.classList = "inliner"
                 
@@ -165,7 +173,7 @@
                 
                 const listTitle = document.createElement("h5")
                 listTitle.innerHTML = musicType.name
-                listTitle.style.fontSize = "250%"
+                listTitle.style.fontSize = "220%"
                 
                 list.appendChild(listTitle)
                 
