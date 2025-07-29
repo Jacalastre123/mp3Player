@@ -212,16 +212,16 @@
                 if (extrad) {
                     document.body.style.backgroundImage = `url('${imgLink.value}')`;
                 }
-
+            
                 const musicType = audios.files[0]
                 if (musicType) {
               audit.src = URL.createObjectURL(musicType)
               audit.play()
-                title.innerHTML = musicType.value
+                title.innerHTML = musicType.name
                 }
-            
+              
                   const picType = picto.files[0]
-                if (picType) {
+              if (picType) {
               document.body.style.backgroundImage = `url('${URL.createObjectURL(picType)}')`
               
                 }
@@ -244,12 +244,12 @@
                 list.onclick = function() {
                     audit.src = URL.createObjectURL(musicType)
                     audit.play()
-                    title.innerHTML = musicType.value
+                    title.innerHTML = musicType.name
                 }
                 document.body.appendChild(list)
                 
                 const listTitle = document.createElement("h5")
-                listTitle.innerHTML = musicType.value
+                listTitle.innerHTML = musicType.name
                 listTitle.style.fontSize = "170%"
                 
                 list.appendChild(listTitle)
