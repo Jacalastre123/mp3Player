@@ -214,7 +214,7 @@
                     document.body.style.backgroundImage = `url('${imgLink.value}' || https://www.stockvault.net/data/2020/06/30/277212/preview16.jpg)`;
                 }
             
-                const musicType = audios.files[0]
+                const musicType = audios?.files?.[0]
                 if (musicType) {
               audit.src = URL.createObjectURL(musicType)
               audit.play()
@@ -225,7 +225,7 @@
                     console.warn("No music")
                 }
               
-                  const picType = picto.files[0]
+                  const picType = picto?.files?.[0]
               if (picType) {
               document.body.style.backgroundImage = `url('${URL.createObjectURL(picType)}')`
               
