@@ -210,14 +210,14 @@
                 event.preventDefault()
 
                 if (extrad) {
-                    document.body.style.backgroundImage = `url('${imgLink.value || "https://www.stockvault.net/data/2020/06/30/277212/preview16.jpg"}')`;
+                    document.body.style.backgroundImage = `url('${imgLink.value}')`;
                 }
 
                 const musicType = audios.files[0]
                 if (musicType) {
               audit.src = URL.createObjectURL(musicType)
               audit.play()
-                title.innerHTML = musicType.name
+                title.innerHTML = musicType.value
                 }
             
                   const picType = picto.files[0]
@@ -249,7 +249,7 @@
                 document.body.appendChild(list)
                 
                 const listTitle = document.createElement("h5")
-                listTitle.innerHTML = musicType.name
+                listTitle.innerHTML = musicType.value
                 listTitle.style.fontSize = "170%"
                 
                 list.appendChild(listTitle)
