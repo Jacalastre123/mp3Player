@@ -158,14 +158,29 @@
 
 
             function extra() {
+
+                const block1 = document.createElement("br")
+                 document.getElementById("formHold").appendChild(block1)
+                const label1 = document.createElement("label")
+                label1.innerHTML = "Background Image URL: "
+                label1.for = "bg"
+                 document.getElementById("formHold").appendChild(label1)
+                
+                
+                
                 extrad = true
                 
                 imgLink.type = "url"
+                imgLink.name = "bg"
                 document.getElementById("formHold").appendChild(imgLink)
                 
                 extras.onclick = function() {
                     extrad = false
                     extras.onclick = extra
+                    block1.remove()
+                    label1.remove()
+                    imgLink.remove()
+                    
                 }
                 
             }
