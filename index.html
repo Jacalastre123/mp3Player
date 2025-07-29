@@ -120,6 +120,9 @@
             <input name="picting" type="file" id="picto" accept="image/*"><br>
             <input class="submission" type="submit" onclick="plays(event)">
         </form>
+
+        
+        
         </div>
         <script>
             const title = document.getElementById("title")
@@ -129,11 +132,15 @@
             let playing = false
              const audit = document.getElementById("audit")
 
-            const listswiper = document.createElement("div")
-                listswiper.style.height = "1%"
-                listswiper.style.width = "200%"
-                listswiper.style.backgroundColor = "transparent"
-                document.body.appendChild(listswiper);
+        const listswiper = document.createElement("div")
+                listswiper.style.height = "20%"
+                listswiper.style.width = "300%"
+            
+                
+                
+                
+                
+                document.body.appendChild(listswiper)
             
             function plays(event) {
                 playing = true
@@ -165,6 +172,7 @@
                 
                 
                 list.classList = "inliner"
+                document.body.appendChild(list)
                 
                 list.onclick = function() {
                     audit.src = URL.createObjectURL(musicType)
