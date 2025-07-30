@@ -230,8 +230,9 @@
                 }
             
                 const musicType = audios?.files?.[0]
+                const music = URL.createObjectURL(musicType)
                 if (musicType) {
-              audit.src = URL.createObjectURL(musicType)
+              audit.src = music.name
               audit.play()
                 title.innerHTML = musicType.name
                 }
@@ -241,8 +242,9 @@
                 }
               
                   const picType = picto?.files?.[0]
+                const picture = URL.createObjectURL(picType)
               if (picType) {
-              document.body.style.backgroundImage = `url('${URL.createObjectURL(picType)}')`
+              document.body.style.backgroundImage = `url('${picture}')`
               
                 }
 
@@ -262,16 +264,17 @@
                 
                 list.classList = "inliner"
                 document.body.appendChild(list)
-                
+
+                const music2 = url.createObjectURL(musicType)
                 list.onclick = function() {
-                    audit.src = URL.createObjectURL(musicType)
+                    audit.src = music2
                     audit.play()
                     title.innerHTML = musicType.name
                 }
                 document.body.appendChild(list)
                 
                 const listTitle = document.createElement("h5")
-                listTitle.innerHTML = musicType.name
+                listTitle.innerHTML = music2.name
                 listTitle.style.fontSize = "170%"
                 
                 list.appendChild(listTitle)
@@ -283,7 +286,7 @@
 
             function start() {
                 
-                if (audit.paused) {
+                if (!playing) {
                     audit.play()
                     playing = true
                     play.innerHTML = "Pause"
