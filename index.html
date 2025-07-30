@@ -252,7 +252,7 @@
                
                   musButton.innerHTML = "Colour show"     
                 musButton.onclick = colourmakers
-                document.getElementById("formHold").appendChild(musButton)
+                document.getElementById("grey").appendChild(musButton)
                 
                 extras.onclick = function() {
                     extrad = false
@@ -264,8 +264,8 @@
                     
                 }
 
-                function colourmakers(event) {
-                    event.preventDefault()
+                function colourmakers() {
+                    
                     if (!colourWorks) {
                     document.getElementById("colour").style.opacity = "0.6"
                         colourWorks = true
