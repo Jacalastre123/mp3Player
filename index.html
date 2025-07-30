@@ -123,20 +123,7 @@
                 width: 99vw;
             }
 
-                        #colour {
-              animation: colourmove 8s infinite;
-              width: 202vw;
-              text-align: center;
-              margin: 0;
-                opacity: 0.0;
-                height: 100%;
-              
-              border-radius: 5px;
-                padding: 5px;
-                            z-index: -1;
-                
-              
-            }
+          
 
             @keyframes colourmove {
                 0% {
@@ -164,6 +151,21 @@
                 }
 
                 
+            }
+
+            #colour {
+                animation: colourmove 8s infinite;
+                width: 202vw;
+                text-align: center;
+                
+                opacity: 0.0;
+                height: 100vh;
+              
+                border-radius: 5px;
+                padding: 5px;
+                z-index: -1;
+                
+              
             }
                 
 
@@ -264,7 +266,7 @@
 
 
             function colourmakers() {
-                    document.getElementById("colour").style.opacity = "0.5"
+                    document.getElementById("colour").style.opacity = "0.6"
                     musButton.onclick = function() {
                         document.getElementById("colour").style.opacity = "0.0"
                         musButton.onclick = colourmakers
