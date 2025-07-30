@@ -33,6 +33,7 @@
                 overflow-y: hidden;
                 width: 202vw;
                 margin: 0;
+                z-index = -2
                 
                 
             }
@@ -122,6 +123,49 @@
                 width: 99vw;
             }
 
+                        #colour {
+              animation: colourmove 8s infinite;
+              width: 202vw;
+              text-align: center;
+              margin: 0;
+                opacity: 0.0;
+                height: 100%;
+              
+              border-radius: 5px;
+                padding: 5px;
+                
+              
+            }
+
+            @keyframes colourmove {
+                0% {
+                    background-color: red;
+                }
+
+                20% {
+                    background-color: orange;
+                }
+
+                40% {
+                    background-color: yellow;
+                }
+
+                60% {
+                    background-color: green;
+                }
+
+                80% {
+                    background-color: blue;
+                }
+
+                100% {
+                    background-color: purple;
+                }
+
+                
+            }
+                
+
           
             
       
@@ -150,6 +194,7 @@
         </form>
         <button id="extras" onclick="extra()">More</button>
         <p>Full screen view if you scroll right</br>By Jacalastre123</p>
+        <div id="colour"></div>
 
         
         
@@ -163,6 +208,7 @@
             
              const audit = document.getElementById("audit")
             const imgLink = document.createElement("input")
+             const musButton = document.createElement("button")
             let playing = false
             extrad = false
 
@@ -177,6 +223,14 @@
                 
                 document.body.appendChild(listswiper)
 
+
+            function colourmakers() {
+                    document.getElementById("colour").style.opacity = "0.5"
+                    musButton.onclick = function {
+                        document.getElementById("colour").style.opacity = "0.0"
+                        musButton.onclick = colourmakers
+                    }
+                }
 
             function extra() {
                   
@@ -195,6 +249,10 @@
                 imgLink.type = "url"
                 imgLink.name = "bg"
                 document.getElementById("formHold").appendChild(imgLink)
+
+               
+           
+                musButton.onclick = colourmakers
                 
                 extras.onclick = function() {
                     extrad = false
