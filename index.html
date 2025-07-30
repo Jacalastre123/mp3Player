@@ -216,15 +216,17 @@
             const extras = document.getElementById("extras")
             
              const audit = document.getElementById("audit")
-            const imgLink = document.createElement("input")
+            
 
                 
                 playing = true
                 event.preventDefault()
 
+                
+
                 if (extrad) {
                     document.body.style.backgroundImage = null
-                    document.body.style.backgroundImage = `url('${imgLink.value}' || https://www.stockvault.net/data/2020/06/30/277212/preview16.jpg)`;
+                    document.body.style.backgroundImage = `url('${imgLink.value}')`;
                 }
             
                 const musicType = audios?.files?.[0]
