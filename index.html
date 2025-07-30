@@ -225,13 +225,7 @@
                 document.body.appendChild(listswiper)
 
 
-            function colourmakers() {
-                    document.getElementById("colour").style.opacity = "0.5"
-                    musButton.onclick = function {
-                        document.getElementById("colour").style.opacity = "0.0"
-                        musButton.onclick = colourmakers
-                    }
-                }
+            
 
             function extra() {
                   
@@ -267,6 +261,15 @@
                 }
                 
             }
+
+
+            function colourmakers() {
+                    document.getElementById("colour").style.opacity = "0.5"
+                    musButton.onclick = function {
+                        document.getElementById("colour").style.opacity = "0.0"
+                        musButton.onclick = colourmakers
+                    }
+                }
             
             function plays(event) {
 
