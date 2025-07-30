@@ -212,7 +212,9 @@
             
              const audit = document.getElementById("audit")
             const imgLink = document.createElement("input")
+             const label1 = document.createElement("label")
              const musButton = document.createElement("button")
+            const block1 = document.createElement("br")
             let playing = false
             extrad = false
             let colourWorks = false
@@ -234,9 +236,9 @@
             function extra() {
                   
 
-                const block1 = document.createElement("br")
+                
                  document.getElementById("formHold").appendChild(block1)
-                const label1 = document.createElement("label")
+               
                 label1.innerHTML = "Background Image URL: "
                 label1.for = "bg"
                  document.getElementById("formHold").appendChild(label1)
@@ -252,7 +254,7 @@
                
                   musButton.innerHTML = "Colour show"     
                 musButton.onclick = colourmakers
-                document.getElementById("grey").appendChild(musButton)
+                document.getElementById("greys").appendChild(musButton)
                 
                 extras.onclick = function() {
                     extrad = false
