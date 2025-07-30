@@ -215,6 +215,7 @@
              const musButton = document.createElement("button")
             let playing = false
             extrad = false
+            let colourWorks = false
 
         const listswiper = document.createElement("div")
                 listswiper.style.height = "20%"
@@ -262,17 +263,23 @@
                     musButton.remove()
                     
                 }
-                
-            }
 
-
-            function colourmakers() {
+                function colourmakers() {
+                    if (!colourWorks) {
                     document.getElementById("colour").style.opacity = "0.6"
-                    musButton.onclick = function() {
+                        colourWorks = true
+                    }
+                    else {
                         document.getElementById("colour").style.opacity = "0.0"
-                        musButton.onclick = colourmakers
+                        
+                        colourWorks = false
                     }
                 }
+                
+            
+
+
+            
             
             function plays(event) {
 
@@ -353,7 +360,7 @@
 
             function start() {
                 
-                if (!playing) {
+                if (audit.paused) {
                     audit.play()
                     playing = true
                     play.innerHTML = "Pause"
