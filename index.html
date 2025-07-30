@@ -199,9 +199,6 @@
             <h4>Choose file here:</h4>
             <label for="music">Music: </label>
             <input name="music" type="file" id="audios" accept="audio/*"><br>
-
-            <label for="picting">Background Image: </label>
-            <input name="picting" type="file" id="picto" accept="image/*"><br>
            
         </form>
 
@@ -220,7 +217,7 @@
             const title = document.getElementById("title")
             const play = document.getElementById("play")
             const audios = document.getElementById("audios")
-            const picto = document.getElementById("picto")
+   
             const extras = document.getElementById("extras")
             
              const audit = document.getElementById("audit")
@@ -303,7 +300,7 @@
                      const title = document.getElementById("title")
             const play = document.getElementById("play")
             const audios = document.getElementById("audios")
-            const picto = document.getElementById("picto")
+            
             const extras = document.getElementById("extras")
             
              const audit = document.getElementById("audit")
@@ -333,18 +330,7 @@
                 }
               
               
-if (picto.files && picto.files.length > 0) {
-    const picType = picto.files[0];
-    const picture = URL.createObjectURL(picType);
-    document.body.style.backgroundImage = `url('${picture}')`;
-} else {
-    console.log("No image file selected.");
-}
-                }
 
-                else {
-                    console.warn("No background")
-                        }
 
                
             
