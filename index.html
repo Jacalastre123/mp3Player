@@ -320,10 +320,10 @@
                     document.body.style.backgroundImage = `url('${imgLink.value}')`;
                 }
             
-                const musicType = audios?.files?.[0]
+                const musicType = audios.files[0]
                 const music = URL.createObjectURL(musicType)
                 if (musicType) {
-              audit.src = music.name
+              audit.src = music
               audit.play()
                 title.innerHTML = musicType.name
                 }
@@ -332,7 +332,7 @@
                     console.warn("No music")
                 }
               
-                  const picType = picto?.files?.[0]
+                  const picType = picto.files[0]
                 const picture = URL.createObjectURL(picType)
               if (picType) {
               document.body.style.backgroundImage = `url('${picture}')`
