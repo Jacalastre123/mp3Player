@@ -264,7 +264,8 @@
                     
                 }
 
-                function colourmakers() {
+                function colourmakers(event) {
+                    event.preventDefault()
                     if (!colourWorks) {
                     document.getElementById("colour").style.opacity = "0.6"
                         colourWorks = true
