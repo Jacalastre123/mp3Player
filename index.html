@@ -332,11 +332,14 @@
                     console.warn("No music")
                 }
               
-                  const picType = picto.files[0]
-                const picture = URL.createObjectURL(picType)
-              if (picType) {
-              document.body.style.backgroundImage = `url('${picture}')`
               
+if (picto.files && picto.files.length > 0) {
+    const picType = picto.files[0];
+    const picture = URL.createObjectURL(picType);
+    document.body.style.backgroundImage = `url('${picture}')`;
+} else {
+    console.log("No image file selected.");
+}
                 }
 
                 else {
