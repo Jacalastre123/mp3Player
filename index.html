@@ -345,16 +345,16 @@
                 list.classList = "inliner"
                 document.body.appendChild(list)
 
-                const music2 = url.createObjectURL(musicType)
+                
                 list.onclick = function() {
-                    audit.src = music2
+                    audit.src = musicType
                     audit.play()
                     title.innerHTML = musicType.name
                 }
                 document.body.appendChild(list)
                 
                 const listTitle = document.createElement("h5")
-                listTitle.innerHTML = music2.name
+                listTitle.innerHTML = musicType.name
                 listTitle.style.fontSize = "170%"
                 
                 list.appendChild(listTitle)
